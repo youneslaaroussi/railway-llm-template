@@ -14,6 +14,8 @@ async function bootstrap() {
       'http://localhost:3001',
       'http://localhost:8080',
       /^http:\/\/localhost:\d+$/,
+      // Railway.app production URLs
+      /^https:\/\/.*\.up\.railway\.app$/,
     ],
     credentials: true,
   });
