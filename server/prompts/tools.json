@@ -1,0 +1,55 @@
+[
+  
+  {
+    "name": "convert_currency",
+    "description": "Convert an amount from one currency to another using the latest exchange rates.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "The amount of money to convert."
+        },
+        "fromCurrency": {
+          "type": "string",
+          "description": "The ISO 4217 currency code of the source currency (e.g., 'USD')."
+        },
+        "toCurrency": {
+          "type": "string",
+          "description": "The ISO 4217 currency code of the target currency (e.g., 'EUR')."
+        },
+        "description": {
+          "type": "string",
+          "description": "A brief description of the conversion (optional)."
+        }
+      },
+      "required": [
+        "amount",
+        "fromCurrency",
+        "toCurrency"
+      ]
+    }
+  },
+  {
+    "name": "save_to_memory",
+    "description": "Save important information about the user, their preferences, travel history, or context to memory for future reference. Use this when you learn something important about the user that would be helpful to remember in future conversations.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "A descriptive key for the memory item (e.g., 'preferred_destinations', 'dietary_restrictions', 'travel_style')"
+        },
+        "value": {
+          "type": "string",
+          "description": "The information to save (e.g., 'Loves adventure travel and hiking', 'Vegetarian', 'Prefers boutique hotels over chains')"
+        },
+        "category": {
+          "type": "string",
+          "description": "Optional category for organizing memories (e.g., 'preferences', 'history', 'restrictions', 'interests')"
+        }
+      },
+      "required": ["key", "value"]
+    }
+  }
+]
