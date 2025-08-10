@@ -90,17 +90,17 @@ npm start
 
 ## Deploy on Railway (Monorepo)
 
+[![Deploy API on Railway](https://railway.app/button.svg)](https://railway.com/compose?code=qj5lpC)
+
 Create two services from the same GitHub repo.
 
 ### API service (server)
-[![Deploy API on Railway](https://railway.app/button.svg)](https://railway.app/new)
 - Root Directory: `server`
 - Start Command: `npm run start:prod`
 - Variables: set `OPENAI_API_KEY`; optionally `OPENAI_MODEL`, `OPENAI_TEMPERATURE`, cache vars
 - Verify: `/healthcheck`, `/api`, `/reference`
 
 ### Web service (site)
-[![Deploy Web on Railway](https://railway.app/button.svg)](https://railway.app/new)
 - Root Directory: `site`
 - Start Command: `next start`
 - Variables: set `NEXT_PUBLIC_BACKEND_URL` to the API service URL
@@ -391,3 +391,4 @@ See Dockerfiles earlier in this README.
 5) Prefer smaller models when quality is acceptable.
 
 If you do only (1) and (2), you’ll slash spend for most workloads.
+
