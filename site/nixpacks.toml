@@ -1,0 +1,16 @@
+# Force Nixpacks to use Bun and the specified build/start commands for the Next.js app.
+
+[phases.install]
+cmds = [
+  "bun install --frozen-lockfile"
+]
+
+[phases.build]
+cmds = [
+  "bun run build"
+]
+
+[start]
+cmd = "bun run start"
+
+
